@@ -13,6 +13,6 @@ To import Protocubo's audits into another cargo-vet instance, add the following
 lines to your `config.toml`:
 
 ```
-[imports.jonasmalacofilho]
+[imports.protocubo]
 url = "https://raw.githubusercontent.com/protocubo/supply-chain/main/audits.toml"
 ```
