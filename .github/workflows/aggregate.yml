@@ -3,7 +3,7 @@ name: Aggregate cargo-vet audits
 on:
   schedule:
     # Every 6 hours
-    - cron:  '* */6 * * *'
+    - cron:  '0 */6 * * *'
   workflow_dispatch:
 
 permissions:
