@@ -1,0 +1,106 @@
+
+# cargo-vet audits file
+
+[[audits.anyhow]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "1.0.98 -> 1.0.100"
+
+[[audits.cookie_store]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "0.21.1 -> 0.22.0"
+notes = "Changed/new constructor."
+
+[[audits.governor]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "0.10.0 -> 0.10.1"
+
+[[audits.nu-ansi-term]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "0.50.1 -> 0.50.3"
+notes = """
+Whitespace changes made diff.rs useless, so checked with cargo vet diff --mode=local ...
+
+Adds support for no_std. No other functional changes.
+"""
+
+[[audits.reqwest_cookie_store]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+version = "0.8.0"
+notes = "Simple wrappers over cookie_store::CookieStore."
+
+[[audits.reqwest_cookie_store]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "0.8.0 -> 0.9.0"
+
+[[audits.rust_decimal]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "1.37.2 -> 1.39.0"
+notes = """
+Changes match the changelog and involve no unsafe or ambient capabilities.
+
+`build.rs` is reasonable and only generates the `README-lib.md` used as crate root documentation.
+
+`.cargo/config.toml` is reasonable and only disables some clippy lints. Though the comment that
+these are Embark's standard lints is *not* correct.
+"""
+
+[[audits.slab]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "0.4.10 -> 0.4.11"
+notes = "Fixes bounds check in get_disjoint_mut."
+
+[[audits.thiserror]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "2.0.12 -> 2.0.17"
+
+[[audits.thiserror-impl]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "2.0.12 -> 2.0.17"
+
+[[audits.tokio-macros]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "2.5.0 -> 2.6.0"
+
+[[audits.tracing-subscriber]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "0.3.19 -> 0.3.20"
+
+[[audits.uuid]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "1.17.0 -> 1.18.1"
+notes = """
+Changes match the changelog, and don't touch dangerous ambient capabilities.
+
+Changes to `unsafe` code are sound. Though some safety comments were removed, and `unsafe_*` macro
+invocations don't pop out as much as `unsafe { ... }`.
+"""
+
+[[audits.windows-link]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "0.2.0 -> 0.2.1"
+
+[[trusted.backtrace]]
+criteria = "safe-to-deploy"
+user-id = 55123 # rust-lang-owner
+start = "2025-05-06"
+end = "2026-10-27"
+
+[[trusted.rustc-demangle]]
+criteria = "safe-to-deploy"
+user-id = 55123 # rust-lang-owner
+start = "2023-03-23"
+end = "2026-10-27"
