@@ -11,7 +11,7 @@ permissions:
 jobs:
   aggregate:
     name: Aggregate Dependencies
-    runs-on: ubuntu-arm
+    runs-on: ubuntu-latest
     env:
       CARGO_VET_VERSION: 0.10.1
     steps:
