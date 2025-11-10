@@ -2,8 +2,9 @@ name: Aggregate cargo-vet audits
 
 on:
   schedule:
-    # Every 5 minutes
-    - cron:  '*/5 * * * *'
+    # Every 6 hours
+    - cron:  '* */6 * * *'
+  workflow_dispatch:
 
 permissions:
   contents: write
