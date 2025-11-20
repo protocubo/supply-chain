@@ -56,6 +56,13 @@ these are Embark's standard lints is *not* correct.
 """
 aggregated-from = "https://raw.githubusercontent.com/protocubo/supply-chain/main/manual-sources/stout.toml"
 
+[[audits.rust_decimal_macros]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+version = "1.39.0"
+notes = "No use of unsafe or powerful ambient capabilities."
+aggregated-from = "https://raw.githubusercontent.com/protocubo/supply-chain/main/manual-sources/stout.toml"
+
 [[audits.slab]]
 who = "Jonas Malaco <jonas@protocubo.io>"
 criteria = "safe-to-deploy"
