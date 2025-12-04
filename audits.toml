@@ -1,4 +1,20 @@
 
+[[audits.actix-files]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "0.6.6 -> 0.6.8"
+notes = """
+The changes match the changelog.
+
+By default files are still served asynchronously. However, if `read_mode_threshold` is non-zero,
+files smaller than the threshold will be served asynchronously by the current task. This probably
+can be exploited if the threshold is set too high, but otherwise works as intended.
+
+On a related note, the docs for `Files|NamedFile::read_mode_threshold` incorrectly invert the
+default and small-file behaviors.
+"""
+aggregated-from = "https://raw.githubusercontent.com/protocubo/supply-chain/main/manual-sources/stout.toml"
+
 [[audits.anyhow]]
 who = "Jonas Malaco <jonas@protocubo.io>"
 criteria = "safe-to-deploy"
@@ -56,13 +72,6 @@ these are Embark's standard lints is *not* correct.
 """
 aggregated-from = "https://raw.githubusercontent.com/protocubo/supply-chain/main/manual-sources/stout.toml"
 
-[[audits.rust_decimal_macros]]
-who = "Jonas Malaco <jonas@protocubo.io>"
-criteria = "safe-to-deploy"
-version = "1.39.0"
-notes = "No use of unsafe or powerful ambient capabilities."
-aggregated-from = "https://raw.githubusercontent.com/protocubo/supply-chain/main/manual-sources/stout.toml"
-
 [[audits.slab]]
 who = "Jonas Malaco <jonas@protocubo.io>"
 criteria = "safe-to-deploy"
@@ -117,6 +126,13 @@ criteria = "safe-to-deploy"
 user-id = 55123
 start = "2025-05-06"
 end = "2026-10-27"
+aggregated-from = "https://raw.githubusercontent.com/protocubo/supply-chain/main/manual-sources/stout.toml"
+
+[[trusted.hashbrown]]
+criteria = "safe-to-deploy"
+user-id = 55123
+start = "2025-04-30"
+end = "2026-12-04"
 aggregated-from = "https://raw.githubusercontent.com/protocubo/supply-chain/main/manual-sources/stout.toml"
 
 [[trusted.rustc-demangle]]
