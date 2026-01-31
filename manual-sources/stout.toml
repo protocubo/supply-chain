@@ -42,10 +42,25 @@ who = "Jonas Malaco <jonas@protocubo.io>"
 criteria = "safe-to-deploy"
 delta = "1.3.1 -> 1.4.0"
 
+[[audits.forwarded-header-value]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+version = "0.1.1"
+
 [[audits.governor]]
 who = "Jonas Malaco <jonas@protocubo.io>"
 criteria = "safe-to-deploy"
 delta = "0.10.0 -> 0.10.1"
+
+[[audits.matchit]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "0.7.3 -> 0.8.4"
+
+[[audits.nonempty]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+version = "0.7.0"
 
 [[audits.nu-ansi-term]]
 who = "Jonas Malaco <jonas@protocubo.io>"
@@ -108,10 +123,40 @@ who = "Jonas Malaco <jonas@protocubo.io>"
 criteria = "safe-to-deploy"
 delta = "2.5.0 -> 2.6.0"
 
+[[audits.tower-cookies]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+version = "0.11.0"
+
+[[audits.tower-http]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "0.6.6 -> 0.6.8"
+
+[[audits.tower-sessions]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+version = "0.14.0"
+
+[[audits.tower-sessions-core]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-run"
+version = "0.14.0"
+
+[[audits.tower_governor]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+version = "0.8.0"
+
 [[audits.tracing-subscriber]]
 who = "Jonas Malaco <jonas@protocubo.io>"
 criteria = "safe-to-deploy"
 delta = "0.3.19 -> 0.3.20"
+
+[[audits.unicase]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "2.8.1 -> 2.9.0"
 
 [[audits.uuid]]
 who = "Jonas Malaco <jonas@protocubo.io>"
