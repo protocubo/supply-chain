@@ -138,10 +138,20 @@ who = "Jonas Malaco <jonas@protocubo.io>"
 criteria = "safe-to-deploy"
 version = "0.14.0"
 
+[[audits.tower-sessions]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "0.14.0 -> 0.15.0"
+
 [[audits.tower-sessions-core]]
 who = "Jonas Malaco <jonas@protocubo.io>"
 criteria = "safe-to-run"
 version = "0.14.0"
+
+[[audits.tower-sessions-core]]
+who = "Jonas Malaco <jonas@protocubo.io>"
+criteria = "safe-to-deploy"
+delta = "0.14.0 -> 0.15.0"
 
 [[audits.tower_governor]]
 who = "Jonas Malaco <jonas@protocubo.io>"
